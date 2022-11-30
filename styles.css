@@ -1,7 +1,11 @@
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+html {
   box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
@@ -14,6 +18,7 @@ nav {
   justify-content: space-between;
   margin: 0 30px;
   align-content: center;
+  margin-top: 20px;
 }
 
 nav p {
@@ -21,6 +26,7 @@ nav p {
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
+  margin: 0;
 }
 
 /* This is the header styling */
@@ -29,7 +35,7 @@ nav p {
   background-image: url(/images/header_background.png);
   background-repeat: no-repeat, repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -69,6 +75,10 @@ nav p {
   padding: 10px;
 }
 
-/* .scroll-button {
+.social-icons:hover {
+  color: aqua;
+}
 
-} */
+.scroll-button {
+  color: green;
+}
