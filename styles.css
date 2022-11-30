@@ -32,7 +32,7 @@ nav p {
 /* This is the header styling */
 
 .header-section {
-  background-image: url(images/header_background.png);
+  background-image: url("images/header_background.png");
   background-repeat: no-repeat, repeat;
   background-position: center;
   background-size: cover;
