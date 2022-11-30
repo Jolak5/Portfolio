@@ -1,79 +1,72 @@
 * {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Inter';
+  font-family: "Inter", sans-serif;
 }
 
 /* This is the nav styling */
 nav {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 30px;
-    align-content: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 30px;
+  align-content: center;
 }
 
 nav p {
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 28px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
 }
 
 /* This is the header styling */
 
 .header-section {
-    background-image: url(/images/header_background.png);
-    background-repeat: no-repeat, repeat;
-    background-position: center;
-    background-size: contain;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    color: #172B4D;
-    min-height: 80vh;
-    justify-content: space-around;
+  background-image: url(/images/header_background.png);
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  color: #172b4d;
+  min-height: 80vh;
+  justify-content: space-around;
 }
 
 .header-section h1 {
-    font-family: Inter;
-    font-size: 60px;
-    font-weight: 700;
-    line-height: 70px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: #172B4D;
-
+  font-family: "Inter", sans-serif;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 70px;
+  text-align: center;
+  color: #172b4d;
 }
 
 .header-span {
-    color: #36B37F;
+  color: #36b37f;
 }
 
 .header-section p {
-
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 36px;
-    /* or 140% */
-    text-align: center;
-    color: #172B4D;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: #172b4d;
 }
 
 /* This is the styling for the social icons */
 
-
-
 .social-icons {
-    display: inline-block;
-    padding: 10px;
-
+  display: inline-block;
+  padding: 10px;
 }
 
 /* .scroll-button {
