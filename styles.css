@@ -8,6 +8,13 @@ html {
   box-sizing: inherit;
 }
 
+h1,
+p,
+ul,
+h4 {
+  margin: 0;
+}
+
 body {
   font-family: "Inter", sans-serif;
 }
@@ -81,4 +88,94 @@ nav p {
 
 .scroll-button {
   color: green;
+}
+/* The header for my recent works */
+
+.top-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #172b4d;
+}
+
+hr {
+  width: 10%;
+  background-color: #36b37e;
+  border-radius: 24px;
+}
+
+/* The main card container */
+
+.card-container {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card h4 {
+  font-size: 24px;
+  text-align: center;
+}
+ul {
+  margin-top: 5%;
+
+  display: flex;
+  list-style-type: none;
+}
+
+li {
+  text-decoration-style: none;
+  text-decoration: none;
+  padding: 0 10px;
+  color: #3a4a42;
+}
+
+.card-button {
+  background-color: #36b37f;
+  border-radius: 4px;
+  align-items: center;
+  padding: 12px;
+  gap: 10px;
+  margin-top: 5%;
+}
+
+/* This is the about us section */
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  margin-top: 10%;
+}
+
+.about h1 {
+  color: #172b4d;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.about p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  margin-top: 5%;
 }
