@@ -89,13 +89,16 @@ nav p {
 .scroll-button {
   color: green;
 }
+
 /* The header for my recent works */
 
 .top-tile {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 10% 0;
 }
+
 .card-title {
   font-style: normal;
   font-weight: 700;
@@ -108,9 +111,10 @@ nav p {
 }
 
 hr {
-  width: 10%;
   background-color: #36b37e;
   border-radius: 24px;
+  width: 48px;
+  height: 4px;
 }
 
 /* The main card container */
@@ -118,30 +122,50 @@ hr {
 .card-container {
   display: grid;
   grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto;
+  row-gap: 30px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #ebf0ee;
+  padding-top: 250px;
+  border: 1px solid #d0d9d4;
+  border-radius: 8px;
+}
+
+.bottom-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  gap: 16px;
+  width: 100%;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: #fff;
 }
 
 .card h4 {
   font-size: 24px;
   text-align: center;
 }
-ul {
-  margin-top: 5%;
 
+ul {
+  margin: 5% 0 0;
+  padding: 0;
   display: flex;
   list-style-type: none;
 }
 
 li {
   text-decoration-style: none;
-  text-decoration: none;
-  padding: 0 10px;
+  padding: 8px 12px;
   color: #3a4a42;
+  background-color: #ebf0ee;
+  margin: 0 10px;
 }
 
 .card-button {
@@ -151,6 +175,11 @@ li {
   padding: 12px;
   gap: 10px;
   margin-top: 5%;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.03em;
 }
 
 /* This is the about us section */
@@ -162,6 +191,7 @@ li {
   text-align: center;
   padding: 0 20px;
   margin-top: 10%;
+  position: relative;
 }
 
 .about h1 {
@@ -178,4 +208,16 @@ li {
   line-height: 32px;
   text-align: center;
   margin-top: 5%;
+}
+
+.about-up {
+  position: absolute;
+  right: 10px;
+  top: -50px;
+}
+
+.about-down {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
