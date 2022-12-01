@@ -172,6 +172,7 @@ li {
   color: #3a4a42;
   background-color: #ebf0ee;
   flex-wrap: wrap;
+  margin: 0 5px;
 }
 
 .card-button {
@@ -185,6 +186,7 @@ li {
   font-size: 17px;
   font-weight: 500;
   font-style: normal;
+  border-style: none;
   letter-spacing: 0.03em;
 }
 
