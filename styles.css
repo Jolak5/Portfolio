@@ -315,7 +315,7 @@ textarea {
 .form-button {
   background-color: #36b37f;
   border-radius: 4px;
-  width: 30%;
+  max-width: 45%;
   padding: 12px;
   margin: 20px 0;
   text-align: center;
