@@ -61,11 +61,12 @@ nav p {
 
 .header-section h1 {
   font-family: "Inter", sans-serif;
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 700;
-  line-height: 70px;
+  line-height: 52px;
   text-align: center;
   color: #172b4d;
+  padding: 30px 10px;
 }
 
 .header-span {
@@ -75,10 +76,11 @@ nav p {
 .header-section p {
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 36px;
   text-align: center;
   color: #172b4d;
+  padding: 0 10px;
 }
 
 /* This is the styling for the social icons */
@@ -373,6 +375,22 @@ textarea:hover {
   visibility: hidden;
 }
 
+button:hover {
+  background-color: #1e488f;
+}
+
+button:active {
+  background-color: #ff6163;
+}
+
+.form-button:active {
+  background-color: #ff6163;
+}
+
+.form-button:hover {
+  background-color: #1e488f;
+}
+
 @media screen and (min-width: 768px) {
   .mobile-nav {
     display: none;
@@ -414,6 +432,13 @@ textarea:hover {
     order: 1;
   }
 
+  .header-section h1 {
+    font-size: 48px;
+  }
+
+  .header-section p {
+    font-size: 20px;
+  }
   /* this is the work container */
 
   .top-tile {
