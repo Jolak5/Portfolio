@@ -341,6 +341,7 @@ textarea {
 .sticky-header {
   display: none;
 }
+
 .contact-image {
   position: absolute;
   right: 0;
@@ -486,6 +487,7 @@ textarea:hover {
     visibility: visible;
     bottom: -5%;
   }
+
   .middle-contact-img {
     position: absolute;
     display: block;
@@ -508,6 +510,7 @@ textarea:hover {
   .get-in-touch {
     font-size: 30px;
   }
+
   .form-input {
     flex-grow: 60%;
   }
