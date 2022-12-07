@@ -22,7 +22,11 @@ body {
 }
 
 /* This is the nav styling */
-nav {
+.desktop-nav {
+  display: none;
+}
+
+.mobile-nav {
   display: flex;
   justify-content: space-between;
   margin: 0 30px;
@@ -57,11 +61,12 @@ nav p {
 
 .header-section h1 {
   font-family: "Inter", sans-serif;
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 700;
-  line-height: 70px;
+  line-height: 52px;
   text-align: center;
   color: #172b4d;
+  padding: 30px 10px;
 }
 
 .header-span {
@@ -71,10 +76,11 @@ nav p {
 .header-section p {
   font-style: normal;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 36px;
   text-align: center;
   color: #172b4d;
+  padding: 0 10px;
 }
 
 /* This is the styling for the social icons */
@@ -134,7 +140,7 @@ hr {
   flex-direction: column;
   align-items: center;
   background-color: #ebf0ee;
-  padding-top: 250px;
+  padding-top: 200px;
   border: 1px solid #d0d9d4;
   border-radius: 8px;
   margin: 5% 5% 0;
@@ -330,6 +336,15 @@ textarea {
   position: relative;
 }
 
+.right-contact-img,
+.middle-contact-img,
+.left-contact-img,
+.desktop-about-up,
+.desktop-about-down,
+.sticky-header {
+  display: none;
+}
+
 .contact-image {
   position: absolute;
   right: 0;
@@ -343,6 +358,7 @@ textarea {
   font-size: 20px;
   line-height: 32px;
   color: #42526e;
+  text-align: center;
 }
 
 textarea {
@@ -353,4 +369,197 @@ textarea {
 
 textarea:hover {
   border-radius: green;
+}
+
+.footer {
+  visibility: hidden;
+}
+
+button:hover {
+  background-color: #1e488f;
+}
+
+button:active {
+  background-color: #ff6163;
+}
+
+.form-button:active {
+  background-color: #ff6163;
+}
+
+.form-button:hover {
+  background-color: #1e488f;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-nav {
+    display: none;
+  }
+
+  .sticky-header {
+    display: block;
+    position: sticky;
+    background: rgb(248, 249, 248, 0.3);
+    top: 0;
+    offset: 100px;
+  }
+
+  .desktop-nav {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  .desktop-nav a {
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+
+  .desktop-header {
+    background-image: url("images/Header-llustration-desktop.png");
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 150vh;
+  }
+
+  .header-section {
+    position: relative;
+    min-height: 80vh;
+    background: none;
+    padding: 0 21%;
+    margin-top: 5%;
+    order: 1;
+  }
+
+  .header-section h1 {
+    font-size: 48px;
+  }
+
+  .header-section p {
+    font-size: 20px;
+  }
+
+  /* this is the work container */
+
+  .top-tile {
+    margin: 10% 0 0;
+  }
+
+  .card-container {
+    grid-template-columns: 25% 25% 25%;
+    grid-template-rows: auto;
+    justify-content: center;
+  }
+
+  .card-container,
+  .language-card {
+    display: flex;
+    flex-direction: row;
+    padding: 0 5%;
+  }
+
+  /* This is the about section */
+
+  .about {
+    margin-top: 5%;
+    padding: 0 21%;
+    position: relative;
+  }
+
+  .desktop-about-up {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+  }
+
+  .desktop-about-down {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .card,
+  .sub-language-card {
+    width: 30%;
+    margin: 5% 20px 0;
+  }
+
+  .form {
+    align-items: flex-start;
+  }
+
+  .btn-div {
+    text-align: left;
+  }
+
+  .form-button {
+    max-width: 20%;
+  }
+
+  .form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+  }
+
+  .right-contact-img {
+    position: absolute;
+    right: 0;
+    display: block;
+    visibility: visible;
+    bottom: -5%;
+  }
+
+  .middle-contact-img {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 200px;
+  }
+
+  .left-contact-img {
+    position: absolute;
+    display: block;
+    visibility: visible;
+    bottom: -90px;
+    left: 0;
+  }
+
+  .get-in-touch-div {
+    width: 33%;
+  }
+
+  .get-in-touch {
+    font-size: 30px;
+  }
+
+  .form-input {
+    flex-grow: 60%;
+  }
+
+  .social-mobile,
+  .contact-image,
+  .email-contact,
+  .about-down,
+  .about-up {
+    display: none;
+  }
+
+  .footer {
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+  }
+
+  .footer-rule {
+    background-color: #fff;
+    width: 100%;
+  }
 }
