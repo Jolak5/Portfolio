@@ -96,7 +96,14 @@ nav p {
 }
 
 .scroll-button {
-  color: green;
+  /* color: green; */
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
 
 /* The header for my recent works */
