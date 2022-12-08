@@ -68,6 +68,30 @@ nav p {
   text-align: center;
   color: #172b4d;
   padding: 30px 10px;
+  animation: writer 4s forwards;
+  margin: 0 auto;
+  width: max-content;
+}
+
+.header-section h1::before,
+.header-section h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.header-section h1::before {
+  background: white;
+  animation: writer 4s forwards;
+}
+
+@keyframes writer {
+  to {
+    left: 100%;
+  }
 }
 
 .header-span {
@@ -96,7 +120,6 @@ nav p {
 }
 
 .scroll-button {
-  /* color: green; */
   animation: blinker 1s linear infinite;
 }
 
@@ -261,6 +284,12 @@ li {
 
 .sub-language-card img {
   margin-bottom: 50px;
+  margin-top: 40px;
+  transition: transform 1s ease-in;
+}
+
+.card-img:hover {
+  transform: rotateY(360deg);
 }
 
 .sub-language-card h4 {
