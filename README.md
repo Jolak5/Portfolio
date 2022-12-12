@@ -64,11 +64,11 @@ CSS
 
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo">https://jolak5.github.io/Portfolio/</a>
+## 🚀 Live Demo <a name="live-demo"></a>
 
 > 
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Live Demo Link](https://jolak5.github.io/Portfolio/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
