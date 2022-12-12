@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -67,6 +68,18 @@ nav p {
   text-align: center;
   color: #172b4d;
   padding: 30px 10px;
+  animation: writer 4s forwards;
+  margin: 0 auto;
+}
+
+@keyframes writer {
+  0% {
+    transform: translateX(-250px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .header-span {
@@ -85,6 +98,10 @@ nav p {
 
 /* This is the styling for the social icons */
 
+.social {
+  z-index: 1;
+}
+
 .social-icons {
   display: inline-block;
   padding: 10px;
@@ -95,7 +112,13 @@ nav p {
 }
 
 .scroll-button {
-  color: green;
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
 
 /* The header for my recent works */
@@ -140,7 +163,7 @@ hr {
   flex-direction: column;
   align-items: center;
   background-color: #ebf0ee;
-  padding-top: 200px;
+  padding-top: 150px;
   border: 1px solid #d0d9d4;
   border-radius: 8px;
   margin: 5% 5% 0;
@@ -152,7 +175,6 @@ hr {
   flex-direction: column;
   align-items: center;
   padding: 16px;
-  gap: 16px;
   width: 100%;
   background: #fff;
   border-radius: 20px;
@@ -160,7 +182,7 @@ hr {
 }
 
 .card h4 {
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -244,19 +266,25 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 20px;
   background-color: #ebf0ee;
-  padding: 50px 0 70px;
   border: 1px solid #c1c7d0;
   border-radius: 8px;
   margin: 5% 5% 0;
 }
 
 .sub-language-card img {
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
+  margin-top: 40px;
+  transition: transform 1s ease-in;
+}
+
+.card-img:hover {
+  transform: rotateY(360deg);
 }
 
 .sub-language-card h4 {
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -309,11 +337,6 @@ textarea {
   color: #6b778c;
 }
 
-/* .form-input {
-  width: 100%;
-  text-align: center;
-} */
-
 .btn-div {
   text-align: center;
 }
@@ -330,6 +353,7 @@ textarea {
   line-height: 24px;
   letter-spacing: 0.03em;
   font-weight: 500;
+  transition: margin-right 2s;
 }
 
 .form-section {
@@ -375,8 +399,17 @@ textarea:hover {
   visibility: hidden;
 }
 
+button {
+  /* transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s; */
+  transition: all 0.3s;
+}
+
 button:hover {
-  background-color: #1e488f;
+  background-color: #172b4d;
+  transform: translateY(2px);
 }
 
 button:active {
@@ -392,19 +425,19 @@ button:active {
 }
 
 @media screen and (min-width: 768px) {
+  header {
+    top: 0;
+    position: sticky;
+    background: rgb(248, 249, 248, 0.3);
+    z-index: 1;
+  }
+
   .mobile-nav {
     display: none;
   }
 
-  .sticky-header {
-    display: block;
-    position: sticky;
-    background: rgb(248, 249, 248, 0.3);
-    top: 0;
-    offset: 100px;
-  }
-
   .desktop-nav {
+    display: block;
     display: flex;
     justify-content: center;
     padding-top: 20px;
@@ -415,12 +448,20 @@ button:active {
     text-decoration: none;
   }
 
+  a:link {
+    color: #36b37f;
+  }
+
+  a:hover {
+    color: hotpink;
+  }
+
   .desktop-header {
     background-image: url("images/Header-llustration-desktop.png");
     background-repeat: no-repeat, repeat;
     background-position: center;
     background-size: cover;
-    min-height: 150vh;
+    min-height: 110vh;
   }
 
   .header-section {
@@ -429,6 +470,7 @@ button:active {
     background: none;
     padding: 0 21%;
     margin-top: 5%;
+    justify-content: start;
     order: 1;
   }
 
@@ -440,24 +482,55 @@ button:active {
     font-size: 20px;
   }
 
+  .scroll-button {
+    margin-top: 100px;
+  }
+
   /* this is the work container */
 
   .top-tile {
     margin: 10% 0 0;
   }
 
-  .card-container {
-    grid-template-columns: 25% 25% 25%;
+  .card-container,
+  .language-card {
+    display: grid;
+    grid-template-columns: 22% 22% 22%;
     grid-template-rows: auto;
     justify-content: center;
+    row-gap: 5px;
+    margin-top: 3%;
   }
 
-  .card-container,
+  .card,
+  .sub-language-card {
+    margin: 5% 20px 0;
+    animation-name: slide;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateY(-150px);
+    }
+
+    100% {
+      left: 0;
+    }
+  }
+
+  /* .card-container,
   .language-card {
     display: flex;
     flex-direction: row;
     padding: 0 5%;
-  }
+    justify-content: center;
+  } */
 
   /* This is the about section */
 
@@ -479,12 +552,6 @@ button:active {
     position: absolute;
     left: 0;
     bottom: 0;
-  }
-
-  .card,
-  .sub-language-card {
-    width: 30%;
-    margin: 5% 20px 0;
   }
 
   .form {
