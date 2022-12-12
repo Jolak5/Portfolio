@@ -78,7 +78,7 @@ nav p {
   }
 
   100% {
-    transform: translateX(0px);
+    transform: translateX(0);
   }
 }
 
@@ -175,7 +175,6 @@ hr {
   flex-direction: column;
   align-items: center;
   padding: 16px;
-  /* gap: 16px; */
   width: 100%;
   background: #fff;
   border-radius: 20px;
@@ -486,6 +485,7 @@ button:active {
   .scroll-button {
     margin-top: 100px;
   }
+
   /* this is the work container */
 
   .top-tile {
@@ -518,6 +518,7 @@ button:active {
     0% {
       transform: translateY(-150px);
     }
+
     100% {
       left: 0;
     }
