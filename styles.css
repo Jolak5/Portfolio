@@ -68,13 +68,21 @@ nav p {
   text-align: center;
   color: #172b4d;
   padding: 30px 10px;
-  animation: writer 4s forwards;
+  animation: writer 4s ease-in-out;
   margin: 0 auto;
 }
 
 @keyframes writer {
   0% {
     transform: translateX(-250px);
+  }
+  /* 
+  20% {
+    transform: translateZ(-200px);
+  } */
+
+  20% {
+    transform: translateY(-100px);
   }
 
   100% {
@@ -424,7 +432,7 @@ button:active {
   background-color: #1e488f;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   header {
     top: 0;
     position: sticky;
@@ -629,4 +637,7 @@ button:active {
     background-color: #fff;
     width: 100%;
   }
+}
+
+@media screen and (min-width: ) {
 }
