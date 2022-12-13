@@ -91,7 +91,7 @@ nav p {
 }
 
 .header-span {
-  color: #36b37f;
+  color: #2d624c;
 }
 
 .header-section p {
@@ -150,7 +150,7 @@ nav p {
 }
 
 hr {
-  background-color: #36b37e;
+  background-color: #294237;
   border-radius: 24px;
   width: 48px;
   height: 4px;
@@ -214,7 +214,7 @@ li {
 }
 
 .card-button {
-  background-color: #36b37f;
+  background-color: #2d624c;
   border-radius: 4px;
   align-items: center;
   padding: 12px;
@@ -311,7 +311,7 @@ li {
 .second-card-list li {
   text-decoration-style: none;
   padding: 8px 12px;
-  color: #36b37e;
+  color: #2d624c;
   background-color: white;
   margin: 0 10px;
   border-radius: 8px;
@@ -350,7 +350,7 @@ textarea {
 }
 
 .form-button {
-  background-color: #36b37f;
+  background-color: #2d624c;
   border-radius: 4px;
   max-width: 45%;
   padding: 12px;
@@ -432,7 +432,7 @@ button:active {
   background-color: #1e488f;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   header {
     top: 0;
     position: sticky;

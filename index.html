@@ -24,12 +24,12 @@
         <nav class="mobile-nav">
           <a href=""><img src="images/Logo Placeholder.svg" alt="My logo" /></a>
 
-          <a href=""
+          <a href="#section-1"
             ><img src="images/Icon - Menu.svg" alt="Hamburger menu"
           /></a>
         </nav>
       </header>
-      e
+
       <div class="header-section">
         <div>
           <h1>
@@ -78,17 +78,17 @@
     <!-- The header for my recent works -->
     <section id="section-1" class="work-container">
       <div class="top-tile">
-        <h1 class="card-title">
+        <h2 class="card-title">
           My Recent <br />
           Works
-        </h1>
+        </h2>
         <hr />
       </div>
       <!-- The main card container -->
       <div class="card-container">
         <div class="card">
           <div class="bottom-card">
-            <h4>Multi-Post Stories <br />Gain+Glory</h4>
+            <h3>Multi-Post Stories <br />Gain+Glory</h3>
             <ul>
               <div class="top-card"></div>
               <li>Html</li>
@@ -100,7 +100,7 @@
         </div>
         <div class="card">
           <div class="bottom-card">
-            <h4>Multi-Post Stories <br />Gain+Glory</h4>
+            <h3>Multi-Post Stories <br />Gain+Glory</h3>
             <ul>
               <div class="top-card"></div>
               <li>Html</li>
@@ -112,20 +112,7 @@
         </div>
         <div class="card">
           <div class="bottom-card">
-            <h4>Multi-Post Stories <br />Gain+Glory</h4>
-            <ul>
-              <div class="top-card"></div>
-              <li>Html</li>
-              <li>Css</li>
-              <li>Javascript</li>
-            </ul>
-            <button class="card-button">See Projects</button>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="bottom-card">
-            <h4>Multi-Post Stories <br />Gain+Glory</h4>
+            <h3>Multi-Post Stories <br />Gain+Glory</h3>
             <ul>
               <div class="top-card"></div>
               <li>Html</li>
@@ -138,7 +125,7 @@
 
         <div class="card">
           <div class="bottom-card">
-            <h4>Multi-Post Stories <br />Gain+Glory</h4>
+            <h3>Multi-Post Stories <br />Gain+Glory</h3>
             <ul>
               <div class="top-card"></div>
               <li>Html</li>
@@ -151,7 +138,20 @@
 
         <div class="card">
           <div class="bottom-card">
-            <h4>Multi-Post Stories <br />Gain+Glory</h4>
+            <h3>Multi-Post Stories <br />Gain+Glory</h3>
+            <ul>
+              <div class="top-card"></div>
+              <li>Html</li>
+              <li>Css</li>
+              <li>Javascript</li>
+            </ul>
+            <button class="card-button">See Projects</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="bottom-card">
+            <h3>Multi-Post Stories <br />Gain+Glory</h3>
             <ul>
               <div class="top-card"></div>
               <li>Html</li>
@@ -240,21 +240,25 @@
       <div class="form">
         <form action="https://formspree.io/f/mknedrva" method="POST">
           <div class="form-input">
+            <label for="fname">Full name</label><br />
             <input
+              id="fname"
               type="text"
               name="text"
               placeholder="Full name"
               required
               max-length="30"
             />
-
+            <label for="email">Email Address</label><br />
             <input
+              id="email"
               type="email"
               name="email"
               placeholder="Email
             address"
               required
             />
+            <label for="text">Text</label><br />
             <textarea
               type="textarea"
               name="text"
@@ -267,7 +271,9 @@
             ></textarea>
 
             <div class="btn-div">
+              <label for="button-footer">Button</label><br />
               <input
+                id="button-footer"
                 class="form-button"
                 type="submit"
                 value="Get in touch"
