@@ -335,29 +335,25 @@ li {
   margin: 5% 5% 0;
 }
 
-.form-button-div {
-  margin-top: 20px;
-  font-size: 16px;
-}
 input,
 textarea {
   width: 100%;
   padding: 20px 20px;
-  /* margin: 10px 0; */
+  margin: 10px 0;
   border: 1px solid #d0d9d4;
   border-radius: 4px;
   color: #6b778c;
 }
 
-.btn-div {
+/* .btn-div {
   text-align: center;
-}
+} */
 
 .form-button {
   background-color: #2d624c;
   border-radius: 4px;
-  max-width: 45%;
-  padding: 12px;
+  max-width: 40%;
+  padding: 8px;
   margin: 20px 0;
   text-align: center;
   color: #fff;
@@ -507,7 +503,7 @@ button:active {
   .card-container,
   .language-card {
     display: grid;
-    grid-template-columns: 22% 22% 22%;
+    grid-template-columns: 40% 40%;
     grid-template-rows: auto;
     justify-content: center;
     row-gap: 5px;
@@ -536,16 +532,6 @@ button:active {
     }
   }
 
-  /* .card-container,
-  .language-card {
-    display: flex;
-    flex-direction: row;
-    padding: 0 5%;
-    justify-content: center;
-  } */
-
-  /* This is the about section */
-
   .about {
     margin-top: 5%;
     padding: 0 21%;
@@ -572,10 +558,6 @@ button:active {
 
   .btn-div {
     text-align: left;
-  }
-
-  .form-button {
-    max-width: 20%;
   }
 
   .form-section {
@@ -643,5 +625,26 @@ button:active {
   }
 }
 
-@media screen and (min-width: ) {
+@media screen and (min-width: 1024px) {
+  .card-container,
+  .language-card {
+    display: grid;
+    grid-template-columns: 22% 22% 22%;
+    grid-template-rows: auto;
+    justify-content: center;
+    row-gap: 5px;
+    margin-top: 3%;
+  }
+
+  .card,
+  .sub-language-card {
+    margin: 5% 20px 0;
+    animation-name: slide;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+  }
 }
