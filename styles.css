@@ -76,10 +76,6 @@ nav p {
   0% {
     transform: translateX(-250px);
   }
-  /* 
-  20% {
-    transform: translateZ(-200px);
-  } */
 
   20% {
     transform: translateY(-100px);
