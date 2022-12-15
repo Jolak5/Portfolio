@@ -240,41 +240,38 @@
       <div class="form">
         <form action="https://formspree.io/f/mknedrva" method="POST">
           <div class="form-input">
-            <div class="form-button-div">
-              <label for="fname">Full name</label><br />
-              <input
-                id="fname"
-                type="text"
-                name="text"
-                placeholder="Full name"
-                required
-                max-length="30"
-              />
-            </div>
-            <div class="form-button-div">
-              <label for="email">Email Address</label>
-              <input
-                id="email"
-                type="email"
-                name="email"
-                placeholder="Email
+            <label for="fname" hidden>Full name</label><br />
+            <input
+              id="fname"
+              type="text"
+              name="text"
+              placeholder="Full name"
+              required
+              max-length="30"
+            />
+
+            <label for="email" hidden>Email Address</label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Email
             address"
-                required
-              />
-            </div>
-            <div class="form-button-div">
-              <label for="text">Text</label><br />
-              <textarea
-                type="textarea"
-                name="text"
-                id="text"
-                max-length="500"
-                placeholder="Enter text here"
-                rows="10"
-                cols="30"
-                required
-              ></textarea>
-            </div>
+              required
+            />
+
+            <label for="text" hidden>Text</label><br />
+            <textarea
+              type="textarea"
+              name="text"
+              id="text"
+              max-length="500"
+              placeholder="Enter text here"
+              rows="10"
+              cols="30"
+              required
+            ></textarea>
+
             <div class="btn-div">
               <input
                 id="button-footer"
