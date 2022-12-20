@@ -12,8 +12,10 @@ html {
 h1,
 p,
 ul,
-h4 {
+h4,
+img {
   margin: 0;
+  padding: 0;
 }
 
 body {
@@ -23,24 +25,61 @@ body {
 }
 
 /* This is the nav styling */
-.desktop-nav {
-  display: none;
+.nav-item {
+  list-style: none;
+  background-color: transparent;
 }
 
-.mobile-nav {
+.nav-item a {
+  background-color: transparent;
+  color: black;
+  text-decoration: none;
+}
+
+.navbar {
+  min-height: 70px;
   display: flex;
   justify-content: space-between;
-  margin: 0 30px;
-  align-content: center;
-  margin-top: 20px;
+  align-items: start;
+  padding: 0 24px;
 }
 
-nav p {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 28px;
-  margin: 0;
+.nav-menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: fixed;
+  left: -100%;
+  top: 30px;
+  gap: 0;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  transition: 0.3s;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.nav-item {
+  margin: 1px 0;
+}
+
+.nav-menu.active {
+  left: 20px;
+}
+
+.nav-link {
+  transition: 0.7s ease;
+}
+
+.nav-link:hover {
+  color: dodgerblue;
+}
+
+.hamburger {
+  cursor: pointer;
 }
 
 /* This is the header styling */
@@ -429,35 +468,41 @@ button:active {
 }
 
 @media screen and (min-width: 768px) {
-  header {
-    top: 0;
-    position: sticky;
-    background: rgb(248, 249, 248, 0.3);
-    z-index: 1;
-  }
-
-  .mobile-nav {
-    display: none;
-  }
-
-  .desktop-nav {
-    display: block;
+  .navbar {
     display: flex;
-    justify-content: center;
-    padding-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    position: fixed;
+    top: 0;
   }
 
-  .desktop-nav a {
-    padding: 10px 20px;
-    text-decoration: none;
+  .hamburger {
+    visibility: hidden;
   }
 
-  a:link {
-    color: #36b37f;
+  .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 42%;
+    top: 0;
+    gap: 0;
+    flex-direction: row;
+    background-color: transparent;
+    text-align: center;
+    width: initial;
+    transition: 0.3s;
+    gap: 0;
+    height: 0;
+    transition: 0.3s;
+    font-size: 1rem;
+    font-weight: 400;
   }
 
-  a:hover {
-    color: hotpink;
+  ul {
+    margin: 0;
+    padding: 20px 0;
   }
 
   .desktop-header {
@@ -603,7 +648,8 @@ button:active {
   .contact-image,
   .email-contact,
   .about-down,
-  .about-up {
+  .about-up,
+  .nagivationToggle {
     display: none;
   }
 
