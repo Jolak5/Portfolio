@@ -28,6 +28,7 @@ body {
 .nav-item {
   list-style: none;
   background-color: transparent;
+  margin: 1px 0;
 }
 
 .nav-item a {
@@ -60,10 +61,6 @@ body {
   transition: 0.3s;
   font-size: 2rem;
   font-weight: 700;
-}
-
-.nav-item {
-  margin: 1px 0;
 }
 
 .nav-menu.active {
@@ -493,9 +490,7 @@ button:active {
     text-align: center;
     width: initial;
     transition: 0.3s;
-    gap: 0;
     height: 0;
-    transition: 0.3s;
     font-size: 1rem;
     font-weight: 400;
   }
