@@ -58,7 +58,6 @@ body {
   width: 100%;
   height: 100%;
   text-align: center;
-  /* transition: 0.1s; */
   font-size: 2rem;
   font-weight: 700;
   padding-left: 20px;
@@ -66,14 +65,17 @@ body {
 }
 
 .nav-menu.active {
-  left: 0px;
+  left: 0;
 }
 
 .welcome.active {
   visibility: hidden;
+  position: relative;
+  top: -200px;
 }
+
 .nav-link {
-  transition: 0.7s ease;
+  transition: 0.1s ease;
 }
 
 .nav-link:hover {
@@ -84,33 +86,26 @@ body {
   display: block;
 }
 
-.hamburger.active .bar:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active .bar:nth-child(1) {
- transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger.active .bar:nth-child(3) {
-     transform: translateY(-8px) rotate(-45deg);
-
-}
-
 .bar {
   display: block;
   width: 25px;
   height: 3px;
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-in-out;
   background-color: black;
 }
 
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
 
-.welcome.active {
-  position: relative;
-  top: -200px;
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 .close-icon {
@@ -178,8 +173,6 @@ body {
 }
 
 /* This is the styling for the social icons */
-
-
 
 .social-icons {
   display: inline-block;
@@ -504,11 +497,11 @@ button:active {
 }
 
 @media screen and (min-width: 768px) {
-  
-  .welcome, 
+  .welcome,
   .hamburger {
     visibility: hidden;
   }
+
   .navbar {
     display: flex;
     justify-content: space-between;
