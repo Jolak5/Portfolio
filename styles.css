@@ -440,7 +440,7 @@ textarea {
 .left-contact-img,
 .desktop-about-up,
 .desktop-about-down,
-.sticky-header {
+.sticky-header, .desktop-popup-container {
   display: none;
 }
 
@@ -700,14 +700,15 @@ button:active {
 
   .desktop-popup-container {
     display: flex;
-    padding: 70px 10px;
+    padding: 10px;
     background-color: white;
     flex-direction: column;
     position: relative;
-    border-color: red;
-    border-radius: 5px;
-    border-style: dashed;
-    margin: 10%;
+      z-index: 1;
+        display: visible;
+  }
+  .popup-desktop-img {
+    height: 70%;
   }
 
   .cancel-icon-desktop {
@@ -766,7 +767,7 @@ button:active {
 
 h3 {
   font-weight: 600;
-  font-size: 32px;
+  font-size: 42px;
   line-height: 44px;
   color: #172b4d;
 }
