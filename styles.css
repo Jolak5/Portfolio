@@ -23,10 +23,13 @@ body {
   margin: 0;
   padding: 0;
 }
+
 a {
   text-decoration: none;
 }
+
 /* This is the nav styling */
+
 .nav-item {
   list-style: none;
   background-color: transparent;
@@ -700,6 +703,7 @@ button:active {
     background-color: #fff;
     width: 100%;
   }
+
   .modal-desktop-overlay {
     width: 100%;
     background-color: #c1c7d0;
@@ -707,6 +711,7 @@ button:active {
     align-items: center;
     justify-content: center;
   }
+
   .desktop-popup-container {
     display: flex;
     padding: 10px;
@@ -714,7 +719,6 @@ button:active {
     flex-direction: column;
     flex-wrap: wrap;
     z-index: 2;
-    display: visible;
   }
 
   .desktop-project-description {
@@ -723,6 +727,7 @@ button:active {
     font-size: 16px;
     line-height: 30px;
   }
+
   .cancel-icon-desktop {
     position: absolute;
     width: 30px;
@@ -730,6 +735,7 @@ button:active {
     right: 60px;
     background-color: white;
   }
+
   .heading-button-container {
     display: flex;
     margin: 5% 4% 0;
@@ -744,6 +750,7 @@ button:active {
     justify-content: flex-start;
     background-color: white;
   }
+
   .popupbutton-div {
     text-align: center;
   }
@@ -766,9 +773,11 @@ button:active {
   overflow: auto;
   overflow-y: scroll;
 }
+
 .popup-img-div {
   position: relative;
 }
+
 .closepopup {
   position: absolute;
   top: 25px;
@@ -782,6 +791,7 @@ button:active {
   margin: 0;
   justify-content: flex-start;
 }
+
 .popup-img {
   width: 100%;
 }
@@ -804,8 +814,8 @@ h3 {
 .popupbutton-div {
   display: flex;
   gap: 20px;
-  /* flex-grow: 1; */
 }
+
 .popup-button {
   width: 45%;
   background-color: #36b37f;
