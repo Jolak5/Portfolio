@@ -506,6 +506,106 @@ button:active {
   background-color: #1e488f;
 }
 
+.popup-mobile {
+  background-color: rgb(193, 199, 208, 80%);
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  justify-content: center;
+  height: 100vh;
+}
+
+.popup-section {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  position: fixed;
+  background-color: white;
+  transition: all 0.4s, top 0.4s;
+  margin: 0.5rem 2rem;
+  width: 80%;
+}
+
+.open-popup {
+  visibility: visible;
+  position: fixed;
+  top: 0;
+  transform: scale(1);
+  overflow: auto;
+  overflow-y: scroll;
+}
+
+.popup-img-div {
+  position: relative;
+}
+
+.popup-img {
+  width: 100%;
+}
+
+.closepopup {
+  position: absolute;
+  top: 25px;
+  right: 23px;
+  width: 30px;
+  color: white;
+  transition: all 0.3s;
+}
+
+.popup-section ul {
+  margin: 0;
+  justify-content: flex-start;
+}
+
+h3 {
+  margin: 5px 0;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+  color: #172b4d;
+}
+
+.popup-section p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #344563;
+  margin-top: 20px;
+}
+
+.popupbutton-div {
+  display: flex;
+  gap: 20px;
+}
+
+.popup-button {
+  width: 45%;
+  background-color: #36b37f;
+  border-radius: 4px;
+  padding: 12px;
+  margin: 20px 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 17px;
+  line-height: 24px;
+  border-style: none;
+  letter-spacing: 0.03em;
+  font-weight: 500;
+  transition: padding 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+/* .popupbutton-img {
+  padding-left: 10px;
+} */
+
+.popup {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   .welcome,
   .hamburger {
@@ -704,21 +804,27 @@ button:active {
     width: 100%;
   }
 
-  .modal-desktop-overlay {
+  .main-desktop-popup {
     width: 100%;
-    background-color: #c1c7d0;
-    display: flex;
+    background-color: rgb(193, 199, 208, 80%);
     align-items: center;
+    z-index: 1;
+    position: fixed;
     justify-content: center;
+    overflow-y: scroll !important;
+    top: 0;
+    height: 100vh;
   }
 
   .desktop-popup-container {
     display: flex;
-    padding: 10px;
+    padding: 3rem 1rem;
     background-color: white;
     flex-direction: column;
-    flex-wrap: wrap;
-    z-index: 2;
+    margin: 2rem 2rem;
+    overflow-y: auto !important;
+    scroll-behavior: auto;
+    height: 90vh;
   }
 
   .desktop-project-description {
@@ -731,14 +837,14 @@ button:active {
   .cancel-icon-desktop {
     position: absolute;
     width: 30px;
-    top: 20px;
+    top: 50px;
     right: 60px;
     background-color: white;
   }
 
   .heading-button-container {
     display: flex;
-    margin: 5% 4% 0;
+    margin: 5% 2% 0;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -753,94 +859,15 @@ button:active {
 
   .popupbutton-div {
     text-align: center;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
   }
-}
 
-.popup-section {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  position: absolute;
-  background-color: white;
-  transition: all 0.4s, top 0.4s;
-}
-
-.open-popup {
-  visibility: visible;
-  position: fixed;
-  top: 0;
-  transform: scale(1);
-  overflow: auto;
-  overflow-y: scroll;
-}
-
-.popup-img-div {
-  position: relative;
-}
-
-.closepopup {
-  position: absolute;
-  top: 25px;
-  right: 23px;
-  width: 30px;
-  color: white;
-  transition: all 0.3s;
-}
-
-.popup-section ul {
-  margin: 0;
-  justify-content: flex-start;
-}
-
-.popup-img {
-  width: 100%;
-}
-
-h3 {
-  font-weight: 600;
-  font-size: 42px;
-  line-height: 44px;
-  color: #172b4d;
-}
-
-.popup-section p {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #344563;
-  margin-top: 20px;
-}
-
-.popupbutton-div {
-  display: flex;
-  gap: 20px;
-}
-
-.popup-button {
-  width: 45%;
-  background-color: #36b37f;
-  border-radius: 4px;
-  padding: 12px;
-  margin: 20px 10px;
-  text-align: center;
-  color: #fff;
-  font-size: 17px;
-  line-height: 24px;
-  border-style: none;
-  letter-spacing: 0.03em;
-  font-weight: 500;
-  transition: padding 1s ease-in-out;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.popupbutton-img {
-  padding-left: 10px;
-}
-
-.popup {
-  display: none;
+  .btn-live-desktop {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 @media screen and (min-width: 1024px) {

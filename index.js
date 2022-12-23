@@ -34,7 +34,7 @@ const projectArray = [
           has been the industry's standard dummy text ever since the 1500s,
           when an unknown printer took a galley of type and scrambled it
           1960s with the release`,
-    projectImageMobile: 'images/Snapshoot Portfolio.png',
+    projectImageMobile: 'images/mobile-popup.png',
     projectImageDesktop: 'images/Desktop-popup.svg',
     technologies1: 'Ruby on rails1',
     technologies2: 'css',
@@ -62,7 +62,7 @@ const projectArray = [
           has been the industry's standard dummy text ever since the 1500s,
           when an unknown printer took a galley of type and scrambled it
           1960s with the release`,
-    projectImageMobile: 'images/Snapshoot Portfolio.png',
+    projectImageMobile: 'images/mobile-popup.png',
     projectImageDesktop: 'images/Desktop-popup.svg',
     technologies1: 'Ruby on rails1',
     technologies2: 'css',
@@ -89,7 +89,7 @@ const projectArray = [
           has been the industry's standard dummy text ever since the 1500s,
           when an unknown printer took a galley of type and scrambled it
           1960s with the release`,
-    projectImageMobile: 'images/Snapshoot Portfolio.png',
+    projectImageMobile: 'images/mobile-popup.png',
     projectImageDesktop: 'images/Desktop-popup.svg',
     technologies1: 'Ruby on rails1',
     technologies2: 'css',
@@ -116,7 +116,7 @@ const projectArray = [
           has been the industry's standard dummy text ever since the 1500s,
           when an unknown printer took a galley of type and scrambled it
           1960s with the release`,
-    projectImageMobile: 'images/Snapshoot Portfolio.png',
+    projectImageMobile: 'images/mobile-popup.png',
     projectImageDesktop: 'images/Desktop-popup.svg',
     technologies1: 'Ruby on rails1',
     technologies2: 'css',
@@ -143,7 +143,7 @@ const projectArray = [
           has been the industry's standard dummy text ever since the 1500s,
           when an unknown printer took a galley of type and scrambled it
           1960s with the release`,
-    projectImageMobile: 'images/Snapshoot Portfolio.png',
+    projectImageMobile: 'images/mobile-popup.png',
     projectImageDesktop: 'images/Desktop-popup.svg',
     technologies1: 'Ruby on rails1',
     technologies2: 'css',
@@ -187,45 +187,51 @@ const startingPoint = document.querySelector('.body');
 function creatMobilePopup() {
   startingPoint.insertAdjacentHTML(
     'afterbegin',
-    `<section id="popup-window" class="popup-section modal-mobile-overlay popup">
-    <div id="popup-window" class="popup-img-div mobile-popup-container">
-      <img
-        id="popimg"
-        class="popup-img project-image"
-        src="images/Snapshoot Portfolio.png"
-        alt=""
-      />
-      <img
-        class="closepopup cancel-icon-mobile"
-        src="images/closeicon.svg"
-        alt=""
-        onclick="closePopup()"
-      />
-    </div>
-    <h3 id="pop-header" class="popup-project-title"></h3>
-    <ul class="popup-technologies">
-      <li class="ruby-technology" id="technology1"></li>
-      <li class="css-technology" id="technology2"></li>
-      <li class="javascript-technology" id="technology3"></li>
-    </ul>
-    <p class="project-description" id="pop-p"></p>
-    <div class="live-source-button-container popupbutton-div">
-      <a
-        class="btn-live live-link popup-button"
-        href="https://jolak5.github.io/Portfolio/"
-        >See Live
+    ` <section id="popup-window" class="modal-mobile-overlay popup-mobile">
+    <div class="popup-section">
+      <div id="popup-window" class="popup-img-div mobile-popup-container">
         <img
-          class="popupbutton-img"
-          src="images/seeliveicon.svg"
-          alt="live icon"
+          id="popimg"
+          class="popup-img project-image"
+          src="images/mobile-popup.png"
+          alt=""
         />
-      </a>
-      <a
-        class="popup-button btn-live source-link"
-        href="https://github.com/Jolak5/Portfolio"
-        >See Source
-        <img class="popupbutton-img" src="images/github button.svg" alt="" />
-      </a>
+        <img
+          class="closepopup cancel-icon-mobile"
+          src="images/MobileIcon - Cancel.svg"
+          alt=""
+          onclick="closePopup()"
+        />
+      </div>
+      <h3 id="pop-header" class="popup-project-title"></h3>
+      <ul class="popup-technologies">
+        <li class="ruby-technology" id="technology1"></li>
+        <li class="css-technology" id="technology2"></li>
+        <li class="javascript-technology" id="technology3"></li>
+      </ul>
+      <p class="project-description" id="pop-p"></p>
+      <div class="live-source-button-container popupbutton-div">
+        <a
+          class="btn-live live-link popup-button"
+          href="https://jolak5.github.io/Portfolio/"
+          >See Live
+          <img
+            class="popupbutton-img"
+            src="images/seeliveicon.svg"
+            alt="live icon"
+          />
+        </a>
+        <a
+          class="popup-button btn-live source-link"
+          href="https://github.com/Jolak5/Portfolio"
+          >See Source 
+          <img
+            class="popupbutton-img"
+            src="images/githubicon.svg"
+            alt=""
+          />
+        </a>
+      </div>
     </div>
   </section> `,
   );
@@ -284,8 +290,7 @@ function createDesktopPopup() {
   startingPoint.insertAdjacentHTML(
     'afterbegin',
     `<div id="popup-window" class="main-desktop-popup modal-desktop-overlay popuphide">
-    <div class="main-desktop-popup">
-    <div class="desktop-popup-container">
+        <div class="desktop-popup-container">
       <img
         class="cancel-icon-desktop"
         src="images/desktopcloseicon.png"
@@ -314,7 +319,7 @@ function createDesktopPopup() {
             >See Source
             <img
               class="popupbutton-img"
-              src="images/github button.svg"
+              src="images/githubicon.svg"
               alt=""
             />
           </a>
@@ -330,8 +335,7 @@ function createDesktopPopup() {
       </ul>
       <p class="desktop-project-description"></p>
     </div>
-    </div>
-  </div>`,
+      </div>`,
   );
 }
 
@@ -354,6 +358,7 @@ const modal = document.querySelector('.modal-desktop-overlay');
 const modalMobile = document.querySelector('.modal-mobile-overlay');
 const closeModal = document.querySelector('.cancel-icon-desktop');
 const closeModalMobile = document.querySelector('.cancel-icon-mobile');
+const popUpSection = document.querySelector('.desktop-popup-container');
 // DESKTOP OVERLAY
 // mobile
 function openModalMobile() {
@@ -367,11 +372,15 @@ function collapseMobileModal() {
 // desktop
 function openModalDesktop() {
   modal.style.display = 'flex';
+  popUpSection.overflow = 'visible';
   modalMobile.style.display = 'none';
+  body.style.overflow = 'hidden';
 }
 
 function collapseDesktopModal() {
   modal.style.display = 'none';
+  body.style.overflow = 'visible';
+  popUpSection.overflow = 'none';
 }
 
 collapseDesktopModal();
