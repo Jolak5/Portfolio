@@ -132,6 +132,7 @@ a {
   color: #172b4d;
   min-height: 80vh;
   justify-content: space-around;
+  z-index: 0;
 }
 
 .header-section h1 {
@@ -144,6 +145,7 @@ a {
   padding: 30px 10px;
   animation: writer 4s ease-in-out;
   margin: 0 auto;
+  z-index: 0;
 }
 
 @keyframes writer {
@@ -201,6 +203,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 0;
   margin: 10% 0;
 }
 
@@ -440,7 +443,8 @@ textarea {
 .left-contact-img,
 .desktop-about-up,
 .desktop-about-down,
-.sticky-header, .desktop-popup-container {
+.sticky-header,
+.desktop-popup-container {
   display: none;
 }
 
@@ -498,7 +502,6 @@ button:active {
 .form-button:hover {
   background-color: #1e488f;
 }
-
 
 @media screen and (min-width: 768px) {
   .welcome,
@@ -697,32 +700,50 @@ button:active {
     background-color: #fff;
     width: 100%;
   }
-
+  .modal-desktop-overlay {
+    width: 100%;
+    background-color: #c1c7d0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .desktop-popup-container {
     display: flex;
     padding: 10px;
     background-color: white;
     flex-direction: column;
-    position: relative;
-      z-index: 1;
-        display: visible;
-  }
-  .popup-desktop-img {
-    height: 70%;
+    flex-wrap: wrap;
+    z-index: 2;
+    display: visible;
   }
 
+  .desktop-project-description {
+    margin: 0 4%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+  }
   .cancel-icon-desktop {
     position: absolute;
     width: 30px;
     top: 20px;
     right: 60px;
-    background-color: black;
+    background-color: white;
   }
   .heading-button-container {
     display: flex;
-    margin-top: 5%;
+    margin: 5% 4% 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
   }
 
+  .popup-technologies {
+    margin: 0 4%;
+    justify-content: flex-start;
+    background-color: white;
+  }
   .popupbutton-div {
     text-align: center;
   }
@@ -782,6 +803,7 @@ h3 {
 
 .popupbutton-div {
   display: flex;
+  gap: 20px;
   /* flex-grow: 1; */
 }
 .popup-button {
@@ -810,7 +832,6 @@ h3 {
 .popup {
   display: none;
 }
-
 
 @media screen and (min-width: 1024px) {
   .card-container,

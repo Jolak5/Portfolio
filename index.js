@@ -283,7 +283,8 @@ const sourceLinkM = document.querySelector(".source-link");
 function createDesktopPopup() {
   startingPoint.insertAdjacentHTML(
     "afterbegin",
-    `<div id="popup-window" class="modal-desktop-overlay popuphide">
+    `<div id="popup-window" class="main-desktop-popup modal-desktop-overlay popuphide">
+    <div class="main-desktop-popup">
     <div class="desktop-popup-container">
       <img
         class="cancel-icon-desktop"
@@ -329,6 +330,7 @@ function createDesktopPopup() {
       </ul>
       <p class="desktop-project-description"></p>
     </div>
+    </div>
   </div>`
   );
 }
@@ -354,3 +356,58 @@ const closeModal = document.querySelector(".cancel-icon-desktop");
 const closeModalMobile = document.querySelector(".cancel-icon-mobile");
 // DESKTOP OVERLAY
 // mobile
+function openModalMobile() {
+  modalMobile.style.display = "flex";
+  modal.style.display = "none";
+}
+
+function collapseMobileModal() {
+  modalMobile.style.display = "none";
+}
+// desktop
+function openModalDesktop() {
+  modal.style.display = "flex";
+  modalMobile.style.display = "none";
+}
+
+function collapseDesktopModal() {
+  modal.style.display = "none";
+}
+
+collapseDesktopModal();
+collapseMobileModal();
+
+projectButton.forEach((button) => {
+  button.addEventListener("click", () => {
+    if (window.innerWidth < 768) {
+      collapseDesktopModal();
+      openModalMobile();
+    } else {
+      collapseMobileModal();
+      openModalDesktop();
+    }
+    const count = button.id;
+    projectNameD.textContent = projectArray[count].projectName;
+    projectImageD.setAttribute("src", projectArray[count].projectImageDesktop);
+    descriptionD.textContent = projectArray[count].projectDescription;
+    technologies3D.textContent = projectArray[count].technologies3;
+    technologies4.textContent = projectArray[count].technologies4;
+    technologies5.textContent = projectArray[count].technologies5;
+    technologies6.textContent = projectArray[count].technologies6;
+    technologies7.textContent = projectArray[count].technologies7;
+    technologies8.textContent = projectArray[count].technologies8;
+    liveLinkD.setAttribute("src", projectArray[count].liveLink);
+    sourceLinkD.setAttribute("src", projectArray[count].sourceLink);
+
+    projectNameM.textContent = projectArray[count].projectName;
+    projectImageM.setAttribute("src", projectArray[count].projectImageMobile);
+    descriptionM.textContent = projectArray[count].projectDescription;
+    technologies1M.textContent = projectArray[count].technologies1;
+    technologies2M.textContent = projectArray[count].technologies2;
+    technologies3M.textContent = projectArray[count].technologies3;
+    liveLinkM.setAttribute("src", projectArray[count].liveLink);
+    sourceLinkM.setAttribute("src", projectArray[count].sourceLink);
+  });
+});
+closeModalMobile.addEventListener("click", collapseMobileModal);
+closeModal.addEventListener("click", collapseDesktopModal);
