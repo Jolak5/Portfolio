@@ -23,7 +23,9 @@ body {
   margin: 0;
   padding: 0;
 }
-
+a {
+  text-decoration: none;
+}
 /* This is the nav styling */
 .nav-item {
   list-style: none;
@@ -268,7 +270,8 @@ ul {
   row-gap: 10px;
 }
 
-li {
+li,
+.Project-technologies1 {
   text-decoration-style: none;
   padding: 8px;
   color: #3a4a42;
@@ -496,6 +499,7 @@ button:active {
   background-color: #1e488f;
 }
 
+
 @media screen and (min-width: 768px) {
   .welcome,
   .hamburger {
@@ -693,7 +697,119 @@ button:active {
     background-color: #fff;
     width: 100%;
   }
+
+  .desktop-popup-container {
+    display: flex;
+    padding: 70px 10px;
+    background-color: white;
+    flex-direction: column;
+    position: relative;
+    border-color: red;
+    border-radius: 5px;
+    border-style: dashed;
+    margin: 10%;
+  }
+
+  .cancel-icon-desktop {
+    position: absolute;
+    width: 30px;
+    top: 20px;
+    right: 60px;
+    background-color: black;
+  }
+  .heading-button-container {
+    display: flex;
+    margin-top: 5%;
+  }
+
+  .popupbutton-div {
+    text-align: center;
+  }
 }
+
+.popup-section {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  position: absolute;
+  background-color: white;
+  transition: all 0.4s, top 0.4s;
+}
+
+.open-popup {
+  visibility: visible;
+  position: fixed;
+  top: 0;
+  transform: scale(1);
+  overflow: auto;
+  overflow-y: scroll;
+}
+.popup-img-div {
+  position: relative;
+}
+.closepopup {
+  position: absolute;
+  top: 25px;
+  right: 23px;
+  width: 30px;
+  color: white;
+  transition: all 0.3s;
+}
+
+.popup-section ul {
+  margin: 0;
+  justify-content: flex-start;
+}
+.popup-img {
+  width: 100%;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172b4d;
+}
+
+.popup-section p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #344563;
+  margin-top: 20px;
+}
+
+.popupbutton-div {
+  display: flex;
+  /* flex-grow: 1; */
+}
+.popup-button {
+  width: 45%;
+  background-color: #36b37f;
+  border-radius: 4px;
+  padding: 12px;
+  margin: 20px 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 17px;
+  line-height: 24px;
+  border-style: none;
+  letter-spacing: 0.03em;
+  font-weight: 500;
+  transition: padding 1s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popupbutton-img {
+  padding-left: 10px;
+}
+
+.popup {
+  display: none;
+}
+
 
 @media screen and (min-width: 1024px) {
   .card-container,
