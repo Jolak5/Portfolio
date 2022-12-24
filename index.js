@@ -421,10 +421,9 @@ projectButton.forEach((button) => {
 closeModalMobile.addEventListener('click', collapseMobileModal);
 closeModal.addEventListener('click', collapseDesktopModal);
 
-
 const form = document.querySelector('form');
 const email = document.querySelector('input[type="email"]');
-const msg = document.querySelector('form .message');
+const msg = document.querySelector('form .text');
 
 function showError(m) {
   msg.style.display = 'block';
