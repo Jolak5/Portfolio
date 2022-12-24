@@ -374,7 +374,6 @@ function openModalDesktop() {
   modal.style.display = 'flex';
   popUpSection.overflow = 'visible';
   modalMobile.style.display = 'none';
-  body.style.overflow = 'hidden';
 }
 
 function collapseDesktopModal() {
