@@ -11,22 +11,30 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
-  <body>
+  <body class="body" id="popup-window">
     <!-- This is the nav code -->
 
     <section class="desktop-header">
       <header>
-        <nav class="desktop-nav">
-          <a href="#section-1">Portfolio</a>
-          <a href="#section-2">About</a>
-          <a href="#section-3">Contact</a>
-        </nav>
-        <nav class="mobile-nav">
-          <a href=""><img src="images/Logo Placeholder.svg" alt="My logo" /></a>
-
-          <a href="#section-1"
-            ><img src="images/Icon - Menu.svg" alt="Hamburger menu"
+        <nav class="navbar">
+          <a class="welcome" href="#"
+            ><img
+              class="welcome1"
+              src="images/Logo Placeholder.svg"
+              alt="My logo"
           /></a>
+
+          <ul class="nav-menu">
+            <li class="nav-item"><a href="#section-1">Portfolio</a></li>
+            <li class="nav-item"><a href="#section-2">About</a></li>
+            <li class="nav-item"><a href="#section-3">Contact</a></li>
+          </ul>
+
+          <div class="hamburger hidden">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
         </nav>
       </header>
 
@@ -68,7 +76,7 @@
               alt="angellist"
           /></a>
         </div>
-        <div class="scroll-button">
+        <div class="scroll-button welcome">
           <a href=""
             ><img src="images/Disabled.svg" alt="touch to go to next section"
           /></a>
@@ -84,84 +92,8 @@
         </h2>
         <hr />
       </div>
-      <!-- The main card container -->
-      <div class="card-container">
-        <div class="card">
-          <div class="bottom-card">
-            <h3>Multi-Post Stories <br />Gain+Glory</h3>
-            <ul>
-              <div class="top-card"></div>
-              <li>Html</li>
-              <li>Css</li>
-              <li>Javascript</li>
-            </ul>
-            <button class="card-button">See Projects</button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="bottom-card">
-            <h3>Multi-Post Stories <br />Gain+Glory</h3>
-            <ul>
-              <div class="top-card"></div>
-              <li>Html</li>
-              <li>Css</li>
-              <li>Javascript</li>
-            </ul>
-            <button class="card-button">See Projects</button>
-          </div>
-        </div>
-        <div class="card">
-          <div class="bottom-card">
-            <h3>Multi-Post Stories <br />Gain+Glory</h3>
-            <ul>
-              <div class="top-card"></div>
-              <li>Html</li>
-              <li>Css</li>
-              <li>Javascript</li>
-            </ul>
-            <button class="card-button">See Projects</button>
-          </div>
-        </div>
 
-        <div class="card">
-          <div class="bottom-card">
-            <h3>Multi-Post Stories <br />Gain+Glory</h3>
-            <ul>
-              <div class="top-card"></div>
-              <li>Html</li>
-              <li>Css</li>
-              <li>Javascript</li>
-            </ul>
-            <button class="card-button">See Projects</button>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="bottom-card">
-            <h3>Multi-Post Stories <br />Gain+Glory</h3>
-            <ul>
-              <div class="top-card"></div>
-              <li>Html</li>
-              <li>Css</li>
-              <li>Javascript</li>
-            </ul>
-            <button class="card-button">See Projects</button>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="bottom-card">
-            <h3>Multi-Post Stories <br />Gain+Glory</h3>
-            <ul>
-              <div class="top-card"></div>
-              <li>Html</li>
-              <li>Css</li>
-              <li>Javascript</li>
-            </ul>
-            <button class="card-button">See Projects</button>
-          </div>
-        </div>
-      </div>
+      <div class="project_section card-container"></div>
     </section>
     <!-- This is the about section -->
     <section id="section-2" class="about-container">
@@ -347,5 +279,7 @@
         /></a>
       </div>
     </footer>
+
+    <script src="index.js"></script>
   </body>
 </html>
