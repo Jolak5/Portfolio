@@ -420,3 +420,33 @@ projectButton.forEach((button) => {
 });
 closeModalMobile.addEventListener('click', collapseMobileModal);
 closeModal.addEventListener('click', collapseDesktopModal);
+
+const form = document.querySelector('form');
+const email = document.querySelector('input[type="email"]');
+const msg = document.querySelector('form .text');
+
+function showError(m) {
+  msg.style.display = 'block';
+  msg.innerText = m;
+}
+
+function showSuccess(mass) {
+  msg.style.display = 'block';
+  msg.style.color = 'white';
+  msg.style.backgroundColor = 'green';
+  msg.innerText = mass;
+}
+
+function checkLowerCase(input) {
+  if (input.value !== input.value.toLowerCase()) {
+    showError('please write the email in lowercase');
+  } else {
+    showSuccess('Thank You.');
+    form.submit();
+  }
+}
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  checkLowerCase(email);
+});
