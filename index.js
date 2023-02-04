@@ -4,12 +4,14 @@ const navMenu = document.querySelector('.nav-menu');
 const welcome = document.querySelector('.welcome');
 const body = document.querySelector('body');
 const navItem = document.querySelectorAll('.nav-item');
+
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
   navMenu.classList.toggle('active');
   welcome.classList.toggle('active');
-  body.style.overflow = 'hidden';
+  body.classList.toggle('active');
 });
+
 for (let i = 0; i < navItem.length; i++) {
   navItem[i].addEventListener('click', () => {
     navMenu.classList.remove('active');
@@ -17,6 +19,10 @@ for (let i = 0; i < navItem.length; i++) {
     welcome.classList.remove('active');
     body.style.overflow = 'visible';
   });
+}
+
+if (window.innerWidth > 900) {
+  body.style.overflow = 'visible';
 }
 
 // -----------REFACTOR PROJECT SECTION----------------
@@ -233,7 +239,7 @@ function creatMobilePopup() {
         </a>
       </div>
     </div>
-  </section> `,
+  </section> `
   );
 }
 
@@ -254,7 +260,7 @@ function creatProject() {
       <a href="#popup-window"
         ><button type="button" id="" class="card-button project-btn">See Project</button></a>
     </div>
-    </div>`,
+    </div>`
   );
 }
 // eslint-disable-next-line no-plusplus
@@ -335,7 +341,7 @@ function createDesktopPopup() {
       </ul>
       <p class="desktop-project-description"></p>
     </div>
-      </div>`,
+      </div>`
   );
 }
 

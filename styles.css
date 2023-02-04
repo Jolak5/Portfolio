@@ -24,6 +24,10 @@ body {
   padding: 0;
 }
 
+.active {
+  overflow: hidden !important;
+}
+
 a {
   text-decoration: none;
 }
@@ -129,12 +133,11 @@ a {
   background-size: cover;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
+
   align-content: center;
   color: #172b4d;
   min-height: 80vh;
-  justify-content: space-around;
+  justify-content: center;
   z-index: 0;
 }
 
@@ -672,7 +675,6 @@ h3 {
     background: none;
     padding: 0 21%;
     margin-top: 5%;
-    justify-content: start;
     order: 1;
   }
 
@@ -820,7 +822,7 @@ h3 {
   }
 
   .main-desktop-popup {
-    width: 100%;
+    width: auto;
     background-color: rgb(193, 199, 208, 80%);
     align-items: center;
     z-index: 1;
@@ -836,24 +838,24 @@ h3 {
     padding: 3rem 1rem;
     background-color: white;
     flex-direction: column;
-    margin: 2rem 2rem;
-    overflow-y: auto !important;
-    scroll-behavior: auto;
-    height: 90vh;
+    height: auto;
+    width: auto;
+  }
+
+  .popup-desktop-img {
+    width: 70%;
   }
 
   .desktop-project-description {
-    margin: 0 4%;
     font-weight: 400;
     font-size: 16px;
     line-height: 30px;
   }
 
   .cancel-icon-desktop {
-    position: absolute;
+    position: relative;
     width: 30px;
-    top: 50px;
-    right: 60px;
+    text-align: left;
     background-color: white;
   }
 
