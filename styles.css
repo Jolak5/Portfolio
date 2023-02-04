@@ -19,7 +19,7 @@ img {
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -123,7 +123,7 @@ a {
 /* This is the header styling */
 
 .header-section {
-  background-image: url("images/header_background.png");
+  background-image: url('images/header_background.png');
   background-repeat: no-repeat, repeat;
   background-position: center;
   background-size: cover;
@@ -139,7 +139,7 @@ a {
 }
 
 .header-section h1 {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 40px;
   font-weight: 700;
   line-height: 52px;
@@ -234,7 +234,7 @@ hr {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto auto auto auto;
-  row-gap: 30px;
+  row-gap: 20px;
   flex-wrap: wrap;
 }
 
@@ -259,6 +259,7 @@ hr {
   background: #fff;
   border-radius: 20px;
   box-shadow: #fff;
+  text-align: center;
 }
 
 .card h4 {
@@ -560,7 +561,7 @@ button:active {
 h3 {
   margin: 5px 0;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 28px;
   line-height: 32px;
   color: #172b4d;
 }
@@ -611,7 +612,7 @@ h3 {
   background-color: #fff;
   color: rgb(205 0 0);
   text-align: center;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 15px;
   border: 1px solid rgb(205 0 0);
   border-radius: 4px;
@@ -658,7 +659,7 @@ h3 {
   }
 
   .desktop-header {
-    background-image: url("images/Header-llustration-desktop.png");
+    background-image: url('images/Header-llustration-desktop.png');
     background-repeat: no-repeat, repeat;
     background-position: center;
     background-size: cover;
@@ -888,7 +889,7 @@ h3 {
   .card-container,
   .language-card {
     display: grid;
-    grid-template-columns: 22% 22% 22%;
+    grid-template-columns: 30% 30% 30%;
     grid-template-rows: auto;
     justify-content: center;
     row-gap: 5px;
